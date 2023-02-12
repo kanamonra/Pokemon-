@@ -10,10 +10,12 @@ public class pairiSub extends super_pokemon{
     }
     @Override
     public void sound(){
-        System.out.print("파을파을! ⊂(◉‿◉)");
+        System.out.print("파을파을! ⊂(◉‿◉)\n");
     }
     @Override
-    public void attack(){
-        System.out.printf("[파을파을!] @s의 @s가 @s 공격 시전!\n( う-´)づ︻╦̵̵̿╤── \\(˚☐˚”)/", owner, name, skills);
+    public void attack(String x)
+    {
+        System.out.println(owner + "의 " + name + "가 " + x + " 공격 성공! ( う-*)づ̿╤── <(˚☐˚”)");
     }
+
 }

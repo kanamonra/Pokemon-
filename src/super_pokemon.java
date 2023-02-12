@@ -1,6 +1,5 @@
 public class super_pokemon
 {
-    protected String pokemon = null ;
     protected String owner = null ;
     protected String[] skills = null ;
     public static int count = 0;
@@ -20,8 +19,8 @@ public class super_pokemon
     public void sound() {
         System.out.println("포켓몬들의 특징 사운드!");
     }   // will use override
-    public void attack() {
-        System.out.println("포켓몬들에 공격");
+    public void attack(String x) {
+        System.out.println(x + "포켓몬들에 공격");
     } // will use override
     public static int getCount(){
         return count;
