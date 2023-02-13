@@ -1,6 +1,6 @@
 public class pikachuSub extends super_pokemon{
 
-    private String name;
+    private final String name;
     public pikachuSub(String owner, String skills) // pikachu constructor
     {
         super(owner, skills);
@@ -13,6 +13,11 @@ public class pikachuSub extends super_pokemon{
     @Override
     public void show_info(){
         System.out.println("포켓몬 정보: 피카츄\n특징: 귀여움, 전기 공격이 최고임");
+        int idx = 0;
+        for (String skill : skills){
+            System.out.println("스킬 정보: ");
+            System.out.println(idx++ + " : " + skill);
+        }
     }
     @Override
     public void attack(String x)

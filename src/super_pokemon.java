@@ -22,7 +22,4 @@ public abstract class super_pokemon
     public void attack(String x) {
         System.out.println(x + "포켓몬들에 공격");
     } // will use override
-    public static int getCount(){
-        return count;
-    }
 }

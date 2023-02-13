@@ -1,5 +1,5 @@
 public class pairiSub extends super_pokemon{
-    private String name;
+    private final String name;
     public pairiSub(String owner, String skills){
         super(owner, skills);
         this.name = "파이리";
@@ -7,6 +7,10 @@ public class pairiSub extends super_pokemon{
     @Override
     public void show_info(){
         System.out.println("포켓몬 정보: 파이리\n특징: 강한 힘을 가지고 있음, 불처럼 뜨거움");
+        int idx = 0;
+        for (String skill : skills){
+            System.out.println("스킬 정보: ");
+            System.out.println(idx++ + " : " + skill);}
     }
     @Override
     public void sound(){

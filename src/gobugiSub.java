@@ -1,5 +1,5 @@
 public class gobugiSub extends super_pokemon{
-    private String name;
+    private final String name;
 
     public gobugiSub(String owner, String skills)
     {
@@ -13,6 +13,10 @@ public class gobugiSub extends super_pokemon{
     @Override
     public void show_info(){
             System.out.println("포켓몬 정보: 꼬부기\n특징: 수영 가능, 물에서 강함");
+            int idx = 0;
+            for (String skill : skills){
+                System.out.println("스킬 정보: ");
+                System.out.println(idx++ + " : " + skill);}
         }
     @Override
     public void attack(String x)

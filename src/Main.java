@@ -27,6 +27,7 @@ public class Main {
                 in_skill = scanner.next();
                 // attack
                 System.out.print("공격 번호 선택 : ");
+                scanner.nextLine();
                 int x = scanner.nextInt();
                 String[] select = in_skill.split("/");
 
@@ -52,28 +53,10 @@ public class Main {
                     p.show_info();
                     System.out.println(" ");
                     p.attack(select[x-1]);
-
                 }
                 else {
                     System.out.println("메뉴에서 골라 주세요");
                 }
-
-
-
-                // 추가 공격 매뉴
-                // if (x == 1) {
-                //    System.out.println(in_skill.split("/")[0]+ "가 공격되었습니다.");
-                // }
-                // else if (x == 2){
-                //    System.out.printf(in_skill.split("/")[1] + "가 공격되었습니다.");
-                // }
-                // else if (x == 3){
-                //    System.out.printf(in_skill.split("/")[2]+ "가 공격되었습니다.");
-                // }
-                // else{
-                //    System.out.println("총 3가지 스킬을 저장할 수 있습니다. 3개 이상 없음...");
-                // }
-
             }
         } while (true);
     }
