@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("================== 포켓몬 프로그램 DEMO ==================");
-        do {
+        super_pokemon p;
+        while (true) {
             System.out.printf("총 %d마리의 포켓몬이 생성되었습니다\n", super_pokemon.count);
             System.out.print("1) 포켓몬 생성  2) 프로그램 종료 :");
             int menu = scanner.nextInt();
@@ -25,39 +26,32 @@ public class Main {
 
                 System.out.print("사용 가능한 기술 입력(/로 구분하여 입력) : ");
                 in_skill = scanner.next();
+
+                if (pokemon == 1) {
+                    p = new pikachuSub(in_name, in_skill);
+
+                } else if (pokemon == 2) {
+                    p = new gobugiSub(in_name, in_skill);
+                }
+                else if (pokemon == 3) {
+                    p = new pairiSub(in_name, in_skill);
+                }
+                else {
+                    System.out.println("메뉴에서 골라 주세요");
+                    continue;
+                }
+                p.sound();
+                p.show_info();
                 // attack
                 System.out.print("공격 번호 선택 : ");
                 scanner.nextLine();
                 int x = scanner.nextInt();
                 String[] select = in_skill.split("/");
-
-                if (pokemon == 1) {
-                    pikachuSub p = new pikachuSub(in_name, in_skill);
-                    p.sound();
-                    p.show_info();
-                    System.out.println(" ");
-                    p.attack(select[x-1]);
-
-                } else if (pokemon == 2) {
-                    gobugiSub p = new gobugiSub(in_name, in_skill);
-                    p.sound();
-                    p.swim();
-                    p.show_info();
-                    System.out.println(" ");
-                    p.attack(select[x-1]);
-
-                }
-                else if (pokemon == 3) {
-                    pairiSub p = new pairiSub(in_name, in_skill);
-                    p.sound();
-                    p.show_info();
-                    System.out.println(" ");
-                    p.attack(select[x-1]);
-                }
-                else {
-                    System.out.println("메뉴에서 골라 주세요");
-                }
+                System.out.println(" ");
+                p.attack(select[x-1]);
+            }else{
+                System.out.println("메뉴에서 골라 주세요");
             }
-        } while (true);
+        }
     }
 }

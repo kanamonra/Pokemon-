@@ -1,8 +1,18 @@
+import java.util.List;
+
 public abstract class super_pokemon
 {
     protected String owner = null ;
     protected String[] skills = null ;
     public static int count = 0;
+
+
+
+    public String getOwner() {
+        return owner;
+    }
+
+
     public super_pokemon(){} // super default constructor
 
     // super constructor

@@ -19,7 +19,7 @@ public class pairiSub extends super_pokemon{
     @Override
     public void attack(String x)
     {
-        System.out.println(owner + "의 " + name + "가 " + x + " 공격 성공! ( う-*)づ̿╤── <(˚☐˚”)");
+        System.out.println(getOwner() + "의 " + name + "가 " + x + " 공격 성공! ( う-*)づ̿╤── <(˚☐˚”)");
     }
 
 }

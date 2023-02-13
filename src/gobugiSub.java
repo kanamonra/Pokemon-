@@ -13,6 +13,7 @@ public class gobugiSub extends super_pokemon{
     @Override
     public void show_info(){
             System.out.println("포켓몬 정보: 꼬부기\n특징: 수영 가능, 물에서 강함");
+            System.out.println("꼬부기가 수영을 합니다‿︵‿ヽ(゜□゜ )ノ‿︵‿");
             int idx = 0;
             for (String skill : skills){
                 System.out.println("스킬 정보: ");
@@ -21,11 +22,9 @@ public class gobugiSub extends super_pokemon{
     @Override
     public void attack(String x)
     {
-        System.out.println(owner + "의 " + name + "가 " + x + " 공격 성공! ( う-*)づ̿╤── <(˚☐˚”)");
+        System.out.println(getOwner() + "의 " + name + "가 " + x + " 공격 성공! ( う-*)づ̿╤── <(˚☐˚”)");
     }
-    public void swim(){
-        System.out.println("꼬부기가 수영을 합니다.‿︵‿ヽ(゜□゜ )ノ‿︵‿");
-    }
+
 }
 
 
