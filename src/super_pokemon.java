@@ -1,4 +1,4 @@
-public class super_pokemon
+public abstract class super_pokemon
 {
     protected String owner = null ;
     protected String[] skills = null ;
